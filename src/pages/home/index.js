@@ -27,7 +27,7 @@ export default class HomePage extends Component {
                       <input className="b-input-form b-w-100" name="no_resi" placeholder="Masukan nomer resi ..."/>
                       <span className="b-search-icon">S</span>
                     </div>
-                    <button className="b-w-100 b-mt-10 b-btn-order b-tbold b-c-white">Order Baru</button>
+                    <button className="b-btn b-btn-red-1 b-btn-block b-mt-4 b-py-3">Order Baru</button>
                   </div>
                 </form>
               </div>
