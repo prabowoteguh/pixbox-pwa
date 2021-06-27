@@ -1,0 +1,90 @@
+.b {
+  &-c {
+    &-primary {
+      color: var(--b-color-primary) !important;
+    }
+    &-blue-1 {
+      color: var(--b-color-blue-1) !important;
+    }
+    &-green-1 {
+      color: var(--b-color-green-1) !important;
+    }
+    &-red-1 {
+      color: var(--b-color-red-1) !important;
+    }
+    &-red-2 {
+      color: var(--b-color-red-2) !important;
+    }
+    &-yellow-1 {
+      color: var(--b-color-yellow-1) !important;
+    }
+    &-black-1 {
+      color: var(--b-color-black-1) !important;
+    }
+    &-black-2 {
+      color: var(--b-color-black-2) !important;
+    }
+    &-gray-1 {
+      color: var(--b-color-gray-1) !important;
+    }
+    &-gray-2 {
+      color: var(--b-color-gray-2) !important;
+    }
+    &-gray-3 {
+      color: var(--b-color-gray-3) !important;
+    }
+    &-gray-4 {
+      color: var(--b-color-gray-4) !important;
+    }
+    &-white {
+      color: var(--b-color-white) !important;
+    }
+    &-semi-white {
+      color: var(--b-color-background) !important;
+    }
+  }
+  &-bg {
+    &-primary {
+      background-color: var(--b-color-primary) !important;
+    }
+    &-blue-1 {
+      background-color: var(--b-color-blue-1) !important;
+    }
+    &-green-1 {
+      background-color: var(--b-color-green-1) !important;
+    }
+    &-red-1 {
+      background-color: var(--b-color-red-1) !important;
+    }
+    &-red-2 {
+      background-color: var(--b-color-red-2) !important;
+    }
+    &-yellow-1 {
+      background-color: var(--b-color-yellow-1) !important;
+    }
+    &-black-1 {
+      background-color: var(--b-color-black-1) !important;
+    }
+    &-black-2 {
+      background-color: var(--b-color-black-2) !important;
+    }
+    &-gray-1 {
+      background-color: var(--b-color-gray-1) !important;
+    }
+    &-gray-2 {
+      background-color: var(--b-color-gray-2) !important;
+    }
+    &-gray-3 {
+      background-color: var(--b-color-gray-3) !important;
+    }
+    &-gray-4 {
+      background-color: var(--b-color-gray-4) !important;
+    }
+    &-white {
+      background-color: var(--b-color-white) !important;
+    }
+    &-semi-white {
+      background-color: var(--b-color-background) !important;
+    }
+  }
+}
