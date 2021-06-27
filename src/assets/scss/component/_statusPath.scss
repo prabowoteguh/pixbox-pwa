@@ -1,0 +1,64 @@
+.b {
+  &-status {
+    $status-path-width: 45px;
+    $size: 23px;
+    $path-top: 10px;
+
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    & &-path {
+      width: $status-path-width;
+      display: flex;
+      position: relative;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: $path-top;
+    }
+    & &-info {
+      padding-top: 4px;
+      padding-bottom: 20px;
+      padding-left: 5px;
+      width: calc(100% - #{$status-path-width});
+    }
+    & &-title {
+      color: var(--b-color-black-1);
+      font-size: 1rem;
+      line-height: 1.4rem;
+      font-weight: bold;
+    }
+    & &-description {
+      color: var(--b-color-black-1);
+      font-size: 1rem;
+      line-height: 1.3rem;
+      font-weight: normal;
+    }
+    & &-circle {
+      width: $size;
+      height: $size;
+      border: 2px solid var(--b-color-black-1);
+      background-color: var(--b-color-red-1);
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &:not(:last-child) {
+      & .b-status-circle {
+        &::after {
+          width: 2px;
+          content: "";
+          height: calc(100% - #{$size});
+          position: absolute;
+          top: $size + $path-top;
+          background-color: var(--b-color-black-1);
+        }
+      }
+    }
+  }
+}
