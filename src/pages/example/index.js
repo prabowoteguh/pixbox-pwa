@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import iconPixbox from "../../assets/images/logo/logo-white-3.png";
 
 export default class Home extends Component {
@@ -13,7 +14,9 @@ export default class Home extends Component {
                   <img src={iconPixbox} />
                 </div>
                 <div class="b-navbar-menu">
-                  <a href="#">Login</a>
+                  <Link to="login">
+                    Login
+                  </Link>
                 </div>
               </div>
             </div>
