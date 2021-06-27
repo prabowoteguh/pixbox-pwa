@@ -1,0 +1,9 @@
+.b {
+  &-body {
+    position: relative;
+    width: 100%;
+    &-with-navbar {
+      padding-top: 50px;
+    }
+  }
+}

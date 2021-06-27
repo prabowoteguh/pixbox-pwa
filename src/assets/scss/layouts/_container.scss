@@ -1,0 +1,35 @@
+.b {
+  &-container {
+    $margin-x: auto;
+    $padding-x: 28px;
+    width: 100%;
+    padding-right: $padding-x;
+    padding-left: $padding-x;
+    margin-right: $margin-x;
+    margin-left: $margin-x;
+  }
+
+  @media (min-width: 576px) {
+    &-container {
+      max-width: 540px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &-container {
+      max-width: 720px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    &-container {
+      max-width: 960px;
+    }
+  }
+
+  @media (min-width: 128) {
+    &-container {
+      max-width: 1250px;
+    }
+  }
+}
