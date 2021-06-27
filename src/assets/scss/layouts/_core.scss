@@ -23,7 +23,7 @@
   --b-color-gray-3: #f7f8f9;
   --b-color-gray-4: #dadada;
   --b-color-white: #fff;
-  --b-color-background: #fafafa;
+  --b-color-background: #f7f7f7;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -61,4 +61,11 @@ body {
   color: var(--b-color-black-1);
   width: 100%;
   height: 100%;
+}
+
+#bacod-framework {
+  position: relative;
+  overflow-x: hidden;
+  height: 100%;
+  background-color: var(--b-color-background);
 }

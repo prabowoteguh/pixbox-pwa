@@ -1,0 +1,141 @@
+.b {
+  &-bold {
+    font-weight: bold;
+  }
+  &-uppercase {
+    text-transform: uppercase;
+  }
+  &-lowercase {
+    text-transform: lowercase;
+  }
+  &-capitalize {
+    text-transform: capitalize;
+  }
+  &-message {
+    width: 100%;
+    margin-top: 3rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    &-subtitle {
+      color: var(--b-color-black-2);
+      font-size: 1rem;
+      font-weight: normal;
+      text-align: center;
+    }
+    &-title {
+      color: var(--b-color-black-1);
+      font-size: 4rem;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+  &-cell-red {
+    background: var(--b-color-red-1);
+    color: var(--b-color-white);
+  }
+  &-cell-yellow {
+    background: var(--b-color-yellow-1);
+    color: var(--b-color-white);
+  }
+  &-align {
+    display: flex;
+    &-wrap {
+      flex-wrap: wrap;
+    }
+    &-nowrap {
+      flex-wrap: nowrap;
+    }
+    &.b {
+      &-align {
+        &-x-center {
+          align-items: center;
+        }
+        &-y-center {
+          justify-content: center;
+        }
+      }
+    }
+  }
+  &-text {
+    &-nowrap {
+      white-space: nowrap;
+    }
+    &-left {
+      text-align: left;
+    }
+    &-right {
+      text-align: right;
+    }
+    &-center {
+      text-align: center;
+    }
+    &-small {
+      font-size: 0.9rem;
+    }
+  }
+  &-display {
+    &-flex {
+      display: flex;
+    }
+  }
+  &-flex {
+    &-wrap {
+      flex-wrap: wrap;
+    }
+    &-nowrap {
+      flex-wrap: nowrap;
+    }
+    @for $i from 1 to 6 {
+      &-#{$i} {
+        flex: $i;
+      }
+    }
+  }
+  &-width {
+    &-auto {
+      width: auto;
+    }
+  }
+
+  $direction-end: 16;
+  $m-directions: "mb", "mt", "ml", "mr";
+  @each $direction in $m-directions {
+    @for $i from 1 to $direction-end {
+      &-#{$direction}-#{$i} {
+        $spacing: 0.25rem * $i;
+        @if $direction == "mb" {
+          margin-bottom: $spacing;
+        } @else if $direction == "mt" {
+          margin-top: $spacing;
+        } @else if $direction == "ml" {
+          margin-left: $spacing;
+        } @else if $direction == "mr" {
+          margin-right: $spacing;
+        }
+      }
+    }
+  }
+  $p-directions: "pb", "pt", "pl", "pr", "px", "py";
+  @each $direction in $p-directions {
+    @for $i from 1 to $direction-end {
+      &-#{$direction}-#{$i} {
+        $spacing: 0.25rem * $i;
+        @if $direction == "pb" {
+          padding-bottom: $spacing !important;
+        } @else if $direction == "pt" {
+          padding-top: $spacing !important;
+        } @else if $direction == "pl" {
+          padding-left: $spacing !important;
+        } @else if $direction == "pr" {
+          padding-right: $spacing !important;
+        } @else if $direction == "px" {
+          padding-right: $spacing !important;
+          padding-left: $spacing !important;
+        } @else if $direction == "py" {
+          padding-top: $spacing !important;
+          padding-bottom: $spacing !important;
+        }
+      }
+    }
+  }
+}
