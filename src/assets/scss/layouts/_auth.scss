@@ -1,0 +1,39 @@
+$header-height: 260px;
+
+.b {
+  &-auth {
+    &-wrapper {
+      width: 100%;
+      height: 100vh;
+      background-color: var(--b-color-red-1);
+      position: relative;
+      & .b-auth {
+        &-title {
+          color: var(--b-color-red-1);
+          font-weight: bold;
+          font-size: 1.3rem;
+        }
+      }
+    }
+    &-header {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+      height: $header-height;
+    }
+    &-body {
+      $radius: 50px;
+
+      width: 100%;
+      background-color: var(--b-color-white);
+      height: calc(100% - #{$header-height});
+      border-top-left-radius: $radius;
+      border-top-right-radius: $radius;
+      padding-top: 35px;
+      padding-bottom: 20px;
+    }
+  }
+}

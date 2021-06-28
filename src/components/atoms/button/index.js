@@ -1,13 +1,13 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import propTypes from 'prop-types'
+import React from "react";
+import { Link } from "react-router-dom";
+import propTypes from "prop-types";
 
 export default function Button(props) {
   const className = [props.className];
-  if(props.isPrimary) className.push("b-btn-red-1");
-  if(props.isBlock) className.push("b-btn-block");
-  if(props.isRounded) className.push("b-btn-rounded");
-  
+  if (props.isPrimary) className.push("b-btn-red-1");
+  if (props.isBlock) className.push("b-btn-block");
+  if (props.isRounded) className.push("b-btn-rounded");
+
   const onClick = () => {
     if (props.onClick) props.onClick();
   };
@@ -40,11 +40,7 @@ export default function Button(props) {
   }
 
   return (
-    <button
-      className={className.join(" ")}
-      style={props.style}
-      onClick={onClick}
-    >
+    <button className={className.join(" ")} style={props.style} onClick={onClick}>
       {props.children}
     </button>
   );
@@ -59,4 +55,4 @@ Button.propTypes = {
   isPrimary: propTypes.bool,
   isExternal: propTypes.bool,
   isBlock: propTypes.bool,
-}
+};
