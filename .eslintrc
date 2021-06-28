@@ -9,9 +9,17 @@
     "prettier",
     "plugin:prettier/recommended"
   ],
+  "env": {
+      "browser": true,
+      "node": true
+  },
   "parserOptions": {
     "ecmaVersion": 2020,
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+        "jsx": true,
+        "modules": true
+    }
   },
   "rules": {
     "indent": ["error", 2],
