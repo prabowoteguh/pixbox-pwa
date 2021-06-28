@@ -1,0 +1,41 @@
+.b {
+    &-form {
+        margin: 1em auto; 
+        padding:1em;
+    }
+    
+    &-in{
+        margin:.2em 0 2em;
+    }
+
+    &-cod{      
+        width: 2em;
+        height: 2em; 
+        border: solid --b-color-primary;
+        border-width: 0 2px 2px 0;
+    }
+
+    &-input{
+        // background-color: ;
+        // color: var(--b-color-gray-2);
+        font-size: 1em;
+        // margin:.2em 0 1em;
+        padding: .50em;
+        width:100%;
+    }
+
+    &-l-cod{
+        padding: 10px;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        cursor: pointer;
+        margin-right: 5px;
+        margin-top: -15px;
+    }
+
+
+
+
+
+}

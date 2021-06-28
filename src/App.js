@@ -4,7 +4,7 @@ import home from "./pages/home/index.js";
 import example from "./pages/example/index.js";
 import login from "./pages/login/index.js";
 import statusPage from './pages/status/index.js';
-import struck from './pages/struck/Index.js';
+import struck from './pages/struck/index.js'; 
 
 import "./assets/scss/main.scss";
 
