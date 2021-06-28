@@ -46,7 +46,7 @@ export default class StatusPage extends Component {
                       <div className="b-status-courier-name">
                         <span>Kurir: </span>
                         <span>Joko Arianto </span>
-                        <span>(081321400)</span>
+                        <span>(081321400123)</span>
                       </div>
                     </div>
                   </div>      
