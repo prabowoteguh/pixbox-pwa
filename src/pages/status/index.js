@@ -33,7 +33,7 @@ export default class StatusPage extends Component {
                     </div>
                     <div className="b-status-info">
                       <div className="b-status-title">Process</div>
-                      <div className="b-status-description">Menunggu paket diproses kampret kampret kampret kampret kampret kampret kampret kampret kampret kampret kampret kampret kampret</div>
+                      <div className="b-status-description">Menunggu paket diproses</div>
                     </div>
                   </div>      
                   <div className="b-status">
@@ -43,6 +43,11 @@ export default class StatusPage extends Component {
                     <div className="b-status-info">
                       <div className="b-status-title">Pickup</div>
                       <div className="b-status-description">Menunggu paket dipickup oleh kurir kami</div>
+                      <div className="b-status-courier-name">
+                        <span>Kurir: </span>
+                        <span>Joko Arianto </span>
+                        <span>(081321400111)</span>
+                      </div>
                     </div>
                   </div>      
                   <div className="b-status">
@@ -50,8 +55,13 @@ export default class StatusPage extends Component {
                       <div className="b-status-circle"></div>
                     </div>
                     <div className="b-status-info">
-                      <div className="b-status-title">Pickup</div>
-                      <div className="b-status-description">Menunggu paket dipickup oleh kurir kami</div>
+                      <div className="b-status-title">Deliver</div>
+                      <div className="b-status-description">Paket sedang dalam perjalanan menuju tujuan</div>
+                      <div className="b-status-courier-name">
+                        <span>Kurir: </span>
+                        <span>Muhammad Zidane </span>
+                        <span>(081321400123)</span>
+                      </div>
                     </div>
                   </div>      
                   <div className="b-status">
@@ -59,19 +69,10 @@ export default class StatusPage extends Component {
                       <div className="b-status-circle"></div>
                     </div>
                     <div className="b-status-info">
-                      <div className="b-status-title">Pickup</div>
-                      <div className="b-status-description">Menunggu paket dipickup oleh kurir kami</div>
+                      <div className="b-status-title">Complete</div>
+                      <div className="b-status-description">Paket telah sampai di tujuan dengan selamat</div>
                     </div>
-                  </div>      
-                  <div className="b-status">
-                    <div className="b-status-path">
-                      <div className="b-status-circle"></div>
-                    </div>
-                    <div className="b-status-info">
-                      <div className="b-status-title">Pickup</div>
-                      <div className="b-status-description">Menunggu paket dipickup oleh kurir kami</div>
-                    </div>
-                  </div>      
+                  </div>         
                 </div>
               </div>
             </div>
