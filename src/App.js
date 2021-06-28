@@ -5,6 +5,8 @@ import example from "./pages/example/index.js";
 import order from "./pages/order/index.js";
 import struck from "./pages/struck/index.js";
 import login from "./pages/login/index.js";
+import statusPage from './pages/status/index.js';
+
 import "./assets/scss/main.scss";
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
         <Route exact path="/order" component={order} />
         <Route exact path="/struck" component={struck} />
         <Route exact path="/login" component={login} />
+        <Route exact path="/status" component={statusPage} />
       </Router>
     </div>
   );

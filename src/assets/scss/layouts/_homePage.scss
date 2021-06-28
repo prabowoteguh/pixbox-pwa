@@ -1,0 +1,96 @@
+.b {
+    // Global
+    &-d-flex {
+        display: flex !important;
+    }
+    &-d-flex-between {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-m-0 {
+        margin: 0 !important;
+    }
+    &-p-relative {
+        position: relative !important;
+    }
+    &-p-absolute {
+        position: absolute !important;
+    }
+    &-search-icon {
+        position: absolute;
+        top: 30%;
+        right: 25px;
+    }
+    &-w-100 {
+        width: 100% !important;
+    }
+    &-tbold-1 {
+        font-weight: 500;
+    }
+    &-tbold-2 {
+        font-weight: 700;
+    }
+    &-f-16 {
+        font-size: 16px;
+    }
+    // End of Global 
+
+    // Home Page
+    &-home-content {
+        margin-top: 110px;
+    }
+    &-form-gp {
+        margin-top: 15px;
+    }
+    &-input-form {
+        border: 1.3px solid #AAD8D3;
+        border-radius: 5px;
+        padding: 18px;
+        font-size: 14px;
+    }
+    &-input-form:focus {
+        outline: none;
+        box-shadow: 0 0 4px #444444;
+    }
+    &-btn-order {
+        cursor: pointer;
+        border: none;
+        border-radius: 7px;
+        padding: 16px;
+        background-color: #FCF876;
+        font-size: 14px;
+        box-shadow: 0 0 4px  #FCF876;
+    }
+    &-btn-order:hover {
+        outline: none;
+        background-color: #F7EA00;
+        box-shadow: 0 0 4px 2px #FFF600;
+    }
+    // End of Home Page
+
+    // Status Page
+    &-status-content {
+        margin-top: 40px;
+    }
+    
+    &-status-payment {
+        background-color: red;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        z-index: 2;
+    }
+
+    &-status-payment::after {
+        content: '';
+        position: relative;
+        display: block;
+        width: 2px;
+        height: 100px;
+        background-color: black;
+        margin: 0 auto;
+        top: 100%;
+        z-index: 1;
+        overflow: auto;
+    }
+}
