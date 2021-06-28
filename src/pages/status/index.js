@@ -33,7 +33,7 @@ export default class StatusPage extends Component {
                     </div>
                     <div className="b-status-info">
                       <div className="b-status-title">Process</div>
-                      <div className="b-status-description">Menunggu paket diproses</div>
+                      <div className="b-status-description">Menunggu paket diprosess</div>
                     </div>
                   </div>      
                   <div className="b-status">
