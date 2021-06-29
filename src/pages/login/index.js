@@ -19,10 +19,24 @@ export default class Login extends Component {
             </div>
             <form>
               <div className="b-form-group" label="Email or Phone">
-                <input type="text" placeholder="Ex : yourname@email.com" />
+                <div className="b-form-input-icon">
+                  <span className="feather icon-user"></span>
+                </div>
+                <input
+                  type="text"
+                  className="b-form-input-strip"
+                  placeholder="Ex : yourname@email.com"
+                />
               </div>
-              <div className="b-form-group">
-                <input type="password" placeholder="Email or Username" />
+              <div className="b-form-group b-mt-4" label="Password">
+                <div className="b-form-input-icon">
+                  <span className="feather icon-lock"></span>
+                </div>
+                <input
+                  type="password"
+                  className="b-form-input-strip"
+                  placeholder="Type your password"
+                />
               </div>
               <div className="b-row b-row-x-center b-mt-7">
                 <div className="b-col-8 b-flex b-col-x-center">
