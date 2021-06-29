@@ -48,6 +48,9 @@ export default class Login extends Component {
                     LOGIN
                   </Link>
                 </div>
+                <div className="b-col-12 b-flex b-col-x-center b-mt-3">
+                  <Link to="home">Back to Home</Link>
+                </div>
               </div>
             </form>
           </div>
