@@ -26,12 +26,13 @@ export default class Login extends Component {
               </div>
               <div className="b-row b-row-x-center b-mt-7">
                 <div className="b-col-8 b-flex b-col-x-center">
-                  <button
+                  <Link
+                    to="/pickup"
                     type="button"
                     className="b-btn b-btn-red-1 b-btn-block b-btn-rounded"
                   >
                     LOGIN
-                  </button>
+                  </Link>
                 </div>
               </div>
             </form>

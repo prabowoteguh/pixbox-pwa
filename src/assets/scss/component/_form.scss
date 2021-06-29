@@ -1,6 +1,83 @@
+%remove-search-button {
+  display: none;
+}
 .b {
   &-form {
+    &-input {
+      width: 100%;
+      outline: none;
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      border: 1px solid var(--b-color-black-1);
+      &[type="search"] {
+        &::-webkit-search-decoration {
+          display: none;
+        }
+        &::-webkit-search-cancel-button {
+          display: none;
+        }
+        &::-webkit-search-results-button {
+          display: none;
+        }
+        &::-webkit-search-results-decoration {
+          display: none;
+        }
+        &::-ms-clear {
+          @extend %remove-search-button;
+          height: 0;
+          width: 0;
+        }
+        &::-ms-reveal {
+          @extend %remove-search-button;
+        }
+      }
+      &.b-form-input {
+        &-rounded {
+          border-radius: 100px;
+        }
+      }
+    }
     &-group {
+      &-search {
+        position: relative;
+        width: 100%;
+        & .b {
+          &-form-input {
+            $placeholder-text-color: var(--b-color-black-2);
+            border: none;
+            background-color: var(--b-color-yellow-1);
+            color: var(--b-color-black-1);
+            padding-top: 15px;
+            padding-bottom: 15px;
+            &::placeholder {
+              color: $placeholder-text-color;
+              opacity: 1;
+            }
+            &:-ms-input-placeholder {
+              color: $placeholder-text-color;
+            }
+            &::-ms-input-placeholder {
+              color: $placeholder-text-color;
+            }
+          }
+          &-btn-search {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+            width: 50px;
+            background-color: var(--b-color-red-1);
+            & span {
+              color: var(--b-color-white);
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
     }
   }
 }
