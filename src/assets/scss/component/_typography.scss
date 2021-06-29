@@ -1,0 +1,8 @@
+.b {
+    &-font{
+        $weightEnd: 10;
+        &-weight {
+            font-weight: $weightEnd;
+        }
+    }
+}
