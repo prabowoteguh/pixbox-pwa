@@ -37,7 +37,10 @@
 
     // Home Page
     &-home-content {
-        margin-top: 110px;
+        margin-top: 4rem;
+        & h2 {
+            text-align: center;
+        }
     }
     &-form-gp {
         margin-top: 15px;

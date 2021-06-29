@@ -37,20 +37,36 @@
         text-decoration: none;
         color: var(--b-color-white);
         cursor: pointer;
-        padding: 2px 10px;
         font-size: 1.1rem;
       }
     }
   }
 }
 
-@media screen and (min-width: 800px) {
-  .b {
-    &-navbar {
+.b {
+  &-navbar {
+    & &-container {
+      padding-left: 28px;
+      padding-right: 28px;
+    }
+
+    @media (min-width: 576px) {
       & &-container {
-        width: 35% !important;
-        margin-left: 30% !important;
-        margin-right: 30% !important;
+        max-width: 540px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      & &-container {
+        max-width: 720px;
+      }
+    }
+
+    @media screen and (min-width: 800px) {
+      & &-container {
+        padding-left: 28px;
+        padding-right: 28px;
+        @include bacod-mobile-core();
       }
     }
   }

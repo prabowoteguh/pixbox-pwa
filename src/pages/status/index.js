@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
+import  {React, Component } from "react"; 
 import iconPixbox from "../../assets/images/logo/logo-white-3.png";
+import Navbar from "../../parts/navbar.js";
 
 export default class StatusPage extends Component {
   render() {
@@ -8,14 +9,14 @@ export default class StatusPage extends Component {
         <div class="b-container">
           <div class="b-navbar">
             <div class="b-navbar-container">
-            <div class="b-navbar-wrapper">
-                <div class="b-navbar-logo">
-                <img src={iconPixbox} />
-                </div>
-                <div class="b-navbar-menu">
-                <a href="#">Login</a>
-                </div>
-            </div>
+              <div class="b-navbar-wrapper">
+                  <div class="b-navbar-logo">
+                  <img src={iconPixbox} />
+                  </div>
+                  <div class="b-navbar-menu">
+                  <a href="#">Login</a>
+                  </div>
+              </div>
             </div>
           </div>
           <div className='b-status-content'>
@@ -79,6 +80,6 @@ export default class StatusPage extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
