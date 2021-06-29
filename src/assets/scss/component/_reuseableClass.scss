@@ -96,7 +96,9 @@
       width: auto;
     }
   }
-
+  &-full-width {
+    width: 100%;
+  }
   $direction-end: 16;
   $m-directions: "mb", "mt", "ml", "mr";
   @each $direction in $m-directions {

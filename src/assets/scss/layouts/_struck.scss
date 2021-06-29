@@ -1,32 +1,9 @@
 .b{
-    &-struck{
-        margin: 25px;
-    }
-    &-kode{
-        text-align: center;
-    }
-    &-barcode{
-        height: 20%;
-        width: 50%;
-        margin : 1em;
-        float: left;
-    }
-
-    &-span {
-        margin-top: .5em;
-        // margin-top: 80px;
-        // margin: 15px 0 15px 0px;
-    }
-
-    &-pick{
-        margin-left: 57px;
-        margin-top: 3px;
-    }
-
-    &-download{
-        margin-top: 35px;
-        margin-right: 40px;
-        float: right;
-        
-    }
+	&-struck{
+		margin: 25px;
+	}
+	&-pick{
+		margin-left: 57px;
+		margin-top: 3px;
+	}
 }

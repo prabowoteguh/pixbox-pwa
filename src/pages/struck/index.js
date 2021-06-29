@@ -2,25 +2,16 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import iconPixbox from "../../assets/images/logo/logo-white-3.png";
 import barcode from "../../assets/images/barcode.jpg";
+import Navbar from "../../parts/navbar.js";
 
 export default class Home extends Component {
   render() {
     return (
       <div class="b-body b-body-with-navbar">
         <div class="b-container">
-          <div class="b-navbar">
-            <div class="b-navbar-container">
-              <div class="b-navbar-wrapper">
-                <div class="b-navbar-logo">
-                  <img src={iconPixbox} />
-                </div>
-                <div class="b-navbar-menu">
-                  <a href="#">Login</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <h1 class="b-kode">BSD2021062536799</h1>
+          <Navbar />
+
+          <h1 class="b-text-center">BSD2021062536799</h1>
           <div class="b-struck">
             <div class="b-span">
               <span>Tanggal : </span>
@@ -56,12 +47,16 @@ export default class Home extends Component {
             <div>
               <span>Diantar Maksimal : </span> <span>30-01-2021</span>
             </div>
-            <img src={barcode} class="b-barcode" />
 
-            <div class="b-mb-2">
-              <button type="button" class="b-btn b-btn-default b-download">
-                DOWNLOAD
-              </button>
+            <div className="b-row b-mt-8">
+              <div className="b-col-7">
+                <img src={barcode} className="b-full-width" />
+              </div>
+              <div className="b-col-5 b-flex b-col-x-center b-col-y-center">
+                <button type="button" class="b-btn b-btn-default b-download">
+                  DOWNLOAD
+                </button>
+              </div>
             </div>
           </div>
         </div>
