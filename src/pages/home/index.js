@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { Link, withRouter, useHistory } from "react-router-dom";
 import { Redirect } from "react-router";
 import Navbar from "../../parts/navbar.js";
@@ -7,8 +7,12 @@ export default class HomePage extends Component {
   onSubmit = (event) => {
     event.preventDefault();
 
-    this.props.history.push("status");
-    // return <Redirect to="/status" />;
+    let searchValue = document.getElementById("search").value.toUpperCase();
+
+    if (searchValue !== "") {
+      this.props.history.push("status", { search: searchValue });
+      // return <Redirect to={{ pathname: "/status",  }} />;
+    }
   };
 
   render() {
@@ -18,9 +22,16 @@ export default class HomePage extends Component {
           <Navbar />
           <div className="b-home-content">
             <h2>Lacak pengiriman</h2>
-            <form className="b-mt-3 b-mb-10" onSubmit={this.onSubmit}>
+            <form
+              action="/status"
+              className="b-mt-3 b-mb-10"
+              onSubmit={this.onSubmit}
+            >
               <div className="b-form-group-search">
                 <input
+                  id="search"
+                  formMethod="GET"
+                  name="search"
                   type="search"
                   className="b-form-input b-form-input-rounded"
                   placeholder="No Resi"
