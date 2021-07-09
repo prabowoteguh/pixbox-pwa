@@ -13,13 +13,14 @@ export default class StatusPage extends Component {
   }
 
   componentDidMount() {
-    axios
-      .get("https://admin.pixbox.id/api/orders/BSD2021070972995")
-      .then((response) => {
-        this.setState({
-          datas: response.data.data,
-        });
+    let searchValue = this.props.location.state.search;
+    let url = `https://admin.pixbox.id/api/orders/${searchValue}`;
+
+    axios.get(url).then((response) => {
+      this.setState({
+        datas: response.data.data,
       });
+    });
   }
   render() {
     const data = this.state.datas;
