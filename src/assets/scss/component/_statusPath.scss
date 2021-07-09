@@ -44,7 +44,7 @@
       line-height: 1.3rem;
       font-weight: normal;
     }
-    & &-circle {
+    & &-circle, & &-active {
       width: $size;
       height: $size;
       border: 2px solid var(--b-color-black-1);
@@ -54,8 +54,11 @@
       align-items: center;
       justify-content: center;
     }
+    & &-active {
+      background-color: var(--b-color-green-1);
+    }
     &:not(:last-child) {
-      & .b-status-circle {
+      & .b-status-circle, & .b-status-active {
         &::after {
           width: 2px;
           content: "";
