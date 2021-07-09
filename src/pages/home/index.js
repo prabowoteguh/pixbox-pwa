@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import { Link, withRouter, useHistory } from "react-router-dom";
+import { Redirect } from "react-router";
 import Navbar from "../../parts/navbar.js";
 
 export default class HomePage extends Component {
   onSubmit = (event) => {
     event.preventDefault();
+
     this.props.history.push("status");
     // return <Redirect to="/status" />;
   };
