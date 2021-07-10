@@ -3,14 +3,46 @@ import { Link } from "react-router-dom";
 import iconPixbox from "../../assets/images/logo/logo-white-3.png";
 import barcode from "../../assets/images/barcode.jpg";
 import Navbar from "../../parts/navbar.js";
+import axios from "axios";
 
 export default class Home extends Component {
+  constructor() {
+    super();
+    this.state = {
+      datas: [],
+      product_id: null,
+      order_date: null,
+      service: null,
+      pickup_name: null,
+      pickup_phone: null,
+      pickup_address: null,
+      deliver_name: null,
+      deliver_phone: null,
+      deliver_address: null,
+      cod: null,
+      jumlahUang: null,
+      paid_in: null,
+      notes: null,
+    };
+  }
+
+  componentDidMount() {
+    axios.get("https://admin.pixbox.id/api/orders/BSD2021070972995").then((res) => {
+      this.setState({ datas: res.data.data });
+    });
+  }
+
   render() {
+    // TEST
+    const data = this.state.datas;
+    console.log(data);
+    let orderDate = new Date(data.order_date);
+    orderDate = `${orderDate.getDay()} - ${orderDate.getMonth()} - ${orderDate.getFullYear()}`;
+
     return (
       <div className="b-body b-body-with-navbar">
         <div className="b-container">
           <Navbar />
-
           <h1 className="b-text-center">BSD2021062536799</h1>
           <div className="b-struck">
             <div className="b-span">
