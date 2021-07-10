@@ -38,6 +38,9 @@
       font-weight: bold;
       line-height: 1.7rem;
     }
+    & &-courier-none {
+      display: none !important;
+    }
     & &-description {
       color: var(--b-color-black-1);
       font-size: 1rem;
