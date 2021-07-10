@@ -8,38 +8,42 @@ export default class StatusPage extends Component {
     super();
 
     this.state = {
+      months: [
+        "Januari",
+        "Februari",
+        "Maret",
+        "April",
+        "Mei",
+        "Juni",
+        "Juli",
+        "Agustus",
+        "September",
+        "Oktober",
+        "November",
+        "Desember",
+      ],
       datas: {},
     };
   }
 
   componentDidMount() {
-    axios
-      .get("https://admin.pixbox.id/api/orders/BSD2021070972995")
-      .then((response) => {
-        this.setState({
-          datas: response.data.data,
-        });
+    let searchValue = this.props.location.state.search;
+    let url = `https://admin.pixbox.id/api/orders/${searchValue}`;
+
+    axios.get(url).then((response) => {
+      this.setState({
+        datas: response.data.data,
       });
+    });
   }
   render() {
     const data = this.state.datas;
-    const mount = [
-      "Januari",
-      "Februari",
-      "Maret",
-      "April",
-      "Mei",
-      "Juni",
-      "Juli",
-      "Agustus",
-      "September",
-      "Oktober",
-      "November",
-      "Desember",
-    ];
+    const { months } = this.state;
 
     let dateOrderDate = new Date(data.order_date);
-    let orderDate = `${dateOrderDate.getDate()} ${mount[dateOrderDate.getMonth()]} `;
+    let orderDate = `${dateOrderDate.getDate()} ${
+      months[dateOrderDate.getMonth()]
+    } `;
     orderDate += dateOrderDate.getFullYear();
 
     return (
