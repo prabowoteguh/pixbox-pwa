@@ -83,7 +83,7 @@ export default class Home extends Component {
                 </div>
                 <div className="b-col-5 b-flex b-col-x-center b-col-y-center">
                   <button type="button" class="b-btn b-btn-default b-download">
-                    DOWNLOAD
+                    DOWNLOADS
                   </button>
                 </div>
               </div>
