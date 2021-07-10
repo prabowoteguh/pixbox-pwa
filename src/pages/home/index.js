@@ -1,6 +1,5 @@
 import React, { Component, useState } from "react";
-import { Link, withRouter, useHistory } from "react-router-dom";
-import { Redirect } from "react-router";
+import { Link, withRouter, useHistory, Redirect } from "react-router-dom";
 import Navbar from "../../parts/navbar.js";
 
 export default class HomePage extends Component {
@@ -19,14 +18,12 @@ export default class HomePage extends Component {
 
   onSubmit = (event) => {
     event.preventDefault();
-    let history = useHistory();
-    // return <Redirect to="/login" />;
-    // const resiCode = this.state.resiCode;
-    // if (resiCode.length > 0) {
-    history.push("/status");
-    // } else {
-    //   this.setState({ message: "RESI TIDAK BOLEH KOSONG" });
-    // }
+    const resiCode = this.state.resiCode;
+    if (resiCode.length > 0) {
+      this.props.history.push("/status");
+    } else {
+      this.setState({ message: "RESI TIDAK BOLEH KOSONG" });
+    }
   };
 
   render() {
