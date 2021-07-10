@@ -20,7 +20,7 @@ export default class HomePage extends Component {
     event.preventDefault();
     const resiCode = this.state.resiCode;
     if (resiCode.length > 0) {
-      this.props.history.push("/status");
+      this.props.history.push(`/status/${resiCode}`);
     } else {
       this.setState({ message: "RESI TIDAK BOLEH KOSONG" });
     }
