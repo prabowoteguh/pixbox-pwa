@@ -1,5 +1,30 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import axios from "axios";
+
+//#region - AXIOS CONFIG START
+axios.defaults.baseURL = "https://staging.pixbox.id";
+// axios.defaults.headers.common["Authorization"] = "AUTH TOKEN";
+// axios.defaults.headers.post["Content-Type"] = "application/json";
+
+axios.interceptors.request.use(
+  (request) => {
+    return request;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+
+axios.interceptors.response.use(
+  (response) => {
+    return response;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+//#endregion - AXIOS CONFIG END
 
 //#region - IMPORT PAGES
 import home from "./pages/home/index.js";

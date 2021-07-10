@@ -29,7 +29,7 @@ export default class StatusPage extends Component {
 
   componentDidMount() {
     const resiCode = this.props.match.params.id;
-    let url = "https://admin.pixbox.id/api/orders/" + resiCode;
+    let url = "api/orders/" + resiCode;
     axios.get(url).then((response) => {
       this.setState({
         detailOrder: response.data.data,
@@ -65,7 +65,7 @@ export default class StatusPage extends Component {
               </div>
               <div className="b-mt-6">
                 <div className="b-status-list">
-                  {orderList.map((item, index) => (
+                  {/* {orderList.map((item, index) => (
                     <div className="b-status">
                       <div className="b-status-path">
                         <div className="b-status-circle"></div>
@@ -77,7 +77,61 @@ export default class StatusPage extends Component {
                         </div>
                       </div>
                     </div>
-                  ))}
+                  ))} */}
+                  <div className="b-status">
+                    <div className="b-status-path">
+                      <div className="b-status-circle b-status-none"></div>
+                    </div>
+                    <div className="b-status-info">
+                      <div className="b-status-title">Process</div>
+                      <div className="b-status-description">
+                        Menunggu paket diprosess
+                      </div>
+                    </div>
+                  </div>
+                  <div className="b-status">
+                    <div className="b-status-path">
+                      <div className="b-status-circle b-status-none"></div>
+                    </div>
+                    <div className="b-status-info">
+                      <div className="b-status-title">Pickup</div>
+                      <div className="b-status-description">
+                        Menunggu paket dipickup oleh kurir kami
+                      </div>
+                      <div className="b-status-courier-name">
+                        <span>Kurir: </span>
+                        <span>{detailOrder.pickup_name}</span>
+                        <span>({detailOrder.pickup_phone})</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="b-status">
+                    <div className="b-status-path">
+                      <div className="b-status-circle"></div>
+                    </div>
+                    <div className="b-status-info">
+                      <div className="b-status-title">Deliver</div>
+                      <div className="b-status-description">
+                        Paket sedang dalam perjalanan menuju tujuan
+                      </div>
+                      <div className="b-status-courier-name">
+                        <span>Kurir: </span>
+                        <span>{detailOrder.deliver_name}</span>
+                        <span>({detailOrder.deliver_phone})</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="b-status">
+                    <div className="b-status-path">
+                      <div className="b-status-circle b-status-none"></div>
+                    </div>
+                    <div className="b-status-info">
+                      <div className="b-status-title">Complete</div>
+                      <div className="b-status-description">
+                        Paket telah sampai di tujuan dengan selamat
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

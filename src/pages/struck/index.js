@@ -27,7 +27,7 @@ export default class Home extends Component {
   }
 
   componentDidMount() {
-    axios.get("https://admin.pixbox.id/api/orders/BSD2021070972995").then((res) => {
+    axios.get("api/orders/BSD2021070972995").then((res) => {
       this.setState({ datas: res.data.data });
     });
   }
