@@ -8,6 +8,20 @@ export default class StatusPage extends Component {
     super();
 
     this.state = {
+      months: [
+        "Januari",
+        "Februari",
+        "Maret",
+        "April",
+        "Mei",
+        "Juni",
+        "Juli",
+        "Agustus",
+        "September",
+        "Oktober",
+        "November",
+        "Desember",
+      ],
       datas: {},
     };
   }
@@ -24,23 +38,12 @@ export default class StatusPage extends Component {
   }
   render() {
     const data = this.state.datas;
-    const mount = [
-      "Januari",
-      "Februari",
-      "Maret",
-      "April",
-      "Mei",
-      "Juni",
-      "Juli",
-      "Agustus",
-      "September",
-      "Oktober",
-      "November",
-      "Desember",
-    ];
+    const { months } = this.state;
 
     let dateOrderDate = new Date(data.order_date);
-    let orderDate = `${dateOrderDate.getDate()} ${mount[dateOrderDate.getMonth()]} `;
+    let orderDate = `${dateOrderDate.getDate()} ${
+      months[dateOrderDate.getMonth()]
+    } `;
     orderDate += dateOrderDate.getFullYear();
 
     return (

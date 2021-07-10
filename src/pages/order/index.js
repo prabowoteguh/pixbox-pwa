@@ -6,15 +6,15 @@ import Navbar from "../../parts/navbar.js";
 export default class Home extends Component {
   render() {
     return (
-      <div class="b-body b-body-with-navbar b-pb-10">
-        <div class="b-container">
+      <div className="b-body b-body-with-navbar b-pb-10">
+        <div className="b-container">
           <Navbar />
 
           <form>
             <h1>FORM ORDER</h1>
 
             <div className="b-form-group b-mt-4" label="Tanggal" message-red="true">
-              <input type="date" class="b-form-input" />
+              <input type="date" className="b-form-input" />
             </div>
 
             <div className="b-form-group b-mt-4" label="Services" message-red="true">
