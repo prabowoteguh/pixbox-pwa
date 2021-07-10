@@ -1,6 +1,5 @@
 import React, { Component, useState } from "react";
-import { Link, withRouter, useHistory } from "react-router-dom";
-import { Redirect } from "react-router";
+import { Link, withRouter, useHistory, Redirect } from "react-router-dom";
 import Navbar from "../../parts/navbar.js";
 
 export default class HomePage extends Component {
@@ -8,33 +7,30 @@ export default class HomePage extends Component {
     super();
 
     this.state = {
-      message: {},
+      message: "",
+      resiCode: "",
     };
   }
+
+  handleResiChange = (event) => {
+    this.setState({ resiCode: event.target.value });
+  };
+
   onSubmit = (event) => {
     event.preventDefault();
-
-    console.log("EVENT ===>", this);
-
-    // let searchValue = document.getElementById("search").value.toUpperCase();
-    // let sampleData = "BSD2021070972995";
-
-    // if (searchValue === sampleData) {
-    //   // this.props.history.push("status", { search: searchValue });
-
-    //   return <Redirect to={{ pathname: `/status/${searchValue}` }} />;
-    // } else if (searchValue === "") {
-    //   document.getElementById("error-message").innerText =
-    //     "Nomer resi tidak boleh kosong";
-    // } else {
-    //   document.getElementById("error-message").innerText = "Nomer resi tidak valid";
-    // }
+    const resiCode = this.state.resiCode;
+    if (resiCode.length > 0) {
+      this.props.history.push(`/status/${resiCode}`);
+    } else {
+      this.setState({ message: "RESI TIDAK BOLEH KOSONG" });
+    }
   };
 
   render() {
+    const { message } = this.state;
     return (
-      <div class="b-body b-body-with-navbar">
-        <div class="b-container">
+      <div className="b-body b-body-with-navbar">
+        <div className="b-container">
           <Navbar />
           <div className="b-home-content">
             <h2>Lacak pengiriman</h2>
@@ -46,16 +42,19 @@ export default class HomePage extends Component {
               <div className="b-form-group-search">
                 <input
                   formMethod="GET"
-                  name="search"
+                  name="resi"
                   type="search"
                   className="b-form-input b-form-input-rounded"
                   placeholder="No Resi"
+                  onChange={this.handleResiChange}
                 />
                 <button type="submit" className="b-btn b-btn-search">
                   <span className="feather icon-search"></span>
                 </button>
               </div>
-              <div class="b-ml-4 b-mb-1 b-c-primary b-text-center"> {{}} </div>
+              <div className="b-ml-4 b-mb-1 b-c-primary b-text-center">
+                {message}
+              </div>
             </form>
             <Link
               to="order"
