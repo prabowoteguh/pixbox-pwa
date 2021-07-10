@@ -53,7 +53,7 @@ export default class Home extends Component {
     } else {
       this.setState({ messagePickupPhone: "ALAMAT PICKUP TIDAK BOLEH KOSONG" });
     }
-    //TEST
+    
     if (state.deliverName.length > 0) {
       console.log(true);
     } else {
