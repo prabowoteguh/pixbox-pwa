@@ -25,7 +25,7 @@ function App() {
         <Route exact path="/home" component={home} />
         <Route exact path="/example" component={example} />
         <Route exact path="/login" component={login} />
-        <Route exact path="/status" component={statusPage} />
+        <Route exact path="/status/:id" component={statusPage} />
         <Route exact path="/struck" component={struck} />
         <Route exact path="/order/create" component={order} />
         <Route exact path="/order/pickup" component={pickup} />
