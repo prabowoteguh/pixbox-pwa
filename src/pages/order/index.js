@@ -53,7 +53,7 @@ export default class Home extends Component {
     } else {
       this.setState({ messagePickupPhone: "ALAMAT PICKUP TIDAK BOLEH KOSONG" });
     }
-
+    //TEST
     if (state.deliverName.length > 0) {
       console.log(true);
     } else {
@@ -203,7 +203,7 @@ export default class Home extends Component {
               />
             </div>
             {this.errorMessage(messageDeliverPhone)}
-
+          
             <div
               className="b-form-group b-mt-4"
               label="Alamat Deliver"
