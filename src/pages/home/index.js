@@ -4,15 +4,31 @@ import { Redirect } from "react-router";
 import Navbar from "../../parts/navbar.js";
 
 export default class HomePage extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      message: {},
+    };
+  }
   onSubmit = (event) => {
     event.preventDefault();
 
-    let searchValue = document.getElementById("search").value.toUpperCase();
+    console.log("EVENT ===>", this);
 
-    if (searchValue !== "") {
-      this.props.history.push("status", { search: searchValue });
-      // return <Redirect to={{ pathname: "/status",  }} />;
-    }
+    // let searchValue = document.getElementById("search").value.toUpperCase();
+    // let sampleData = "BSD2021070972995";
+
+    // if (searchValue === sampleData) {
+    //   // this.props.history.push("status", { search: searchValue });
+
+    //   return <Redirect to={{ pathname: `/status/${searchValue}` }} />;
+    // } else if (searchValue === "") {
+    //   document.getElementById("error-message").innerText =
+    //     "Nomer resi tidak boleh kosong";
+    // } else {
+    //   document.getElementById("error-message").innerText = "Nomer resi tidak valid";
+    // }
   };
 
   render() {
@@ -24,12 +40,11 @@ export default class HomePage extends Component {
             <h2>Lacak pengiriman</h2>
             <form
               action="/status"
-              className="b-mt-3 b-mb-10"
+              className="b-mt-4 b-mb-10"
               onSubmit={this.onSubmit}
             >
               <div className="b-form-group-search">
                 <input
-                  id="search"
                   formMethod="GET"
                   name="search"
                   type="search"
@@ -40,6 +55,7 @@ export default class HomePage extends Component {
                   <span className="feather icon-search"></span>
                 </button>
               </div>
+              <div class="b-ml-4 b-mb-1 b-c-primary b-text-center"> {{}} </div>
             </form>
             <Link
               to="order"
