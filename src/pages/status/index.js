@@ -27,7 +27,7 @@ export default class StatusPage extends Component {
   render() {
     const data = this.state.datas;
     const orderStatus = this.state.orderStatus;
-    const mount = [
+    const month = [
       "Januari",
       "Februari",
       "Maret",
@@ -43,7 +43,7 @@ export default class StatusPage extends Component {
     ];
 
     let dateOrderDate = new Date(data.order_date);
-    let orderDate = `${dateOrderDate.getDate()} ${mount[dateOrderDate.getMonth()]} `;
+    let orderDate = `${dateOrderDate.getDate()} ${month[dateOrderDate.getMonth()]} `;
     orderDate += dateOrderDate.getFullYear();
 
     let process, pickup, deliver, complete, pickupCourier, deliverCourier;
